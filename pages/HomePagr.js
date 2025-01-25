@@ -28,9 +28,8 @@ const HomePagr = () => {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
-        headerShown: false, // Disable the default header
+        headerShown: false,
         tabBarIcon: ({ color, size }) => {
-          // Add icons for each tab
           let iconName;
           if (route.name === 'Home') {
             iconName = 'home-outline';
@@ -41,8 +40,8 @@ const HomePagr = () => {
           }
           return <Icon name={iconName} size={size} color={color} />;
         },
-        tabBarActiveTintColor: '#6c63ff', // Active tab color
-        tabBarInactiveTintColor: 'gray', // Inactive tab color
+        tabBarActiveTintColor: '#6c63ff',
+        tabBarInactiveTintColor: 'gray',
       })}
     >
       <Tab.Screen name="Home" component={HomeScreen} />
